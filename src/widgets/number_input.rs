@@ -302,8 +302,7 @@ where
         let num_size = self.size();
         let limits = limits
             .width(num_size.width)
-            .height(Length::Shrink)
-            .shrink(padding);
+            .height(Length::Shrink);
         let content = self
             .content
             .layout(&mut tree.children[0], renderer, &limits, None);

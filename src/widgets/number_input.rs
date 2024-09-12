@@ -300,9 +300,7 @@ where
     fn layout(&self, tree: &mut Tree, renderer: &Renderer, limits: &Limits) -> Node {
         let padding = Padding::from(self.padding);
         let num_size = self.size();
-        let limits = limits
-            .width(num_size.width)
-            .height(Length::Shrink);
+        let limits = limits.width(num_size.width).height(Length::Shrink);
         let content = self
             .content
             .layout(&mut tree.children[0], renderer, &limits, None);
